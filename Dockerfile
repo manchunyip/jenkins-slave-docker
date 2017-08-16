@@ -1,4 +1,4 @@
-FROM jenkinsci/slave:alpine
+FROM jenkinsci/slave:latest
 
 # Set desired Android Linux SDK version
 ENV ANDROID_SDK_VERSION 24.4.1
@@ -17,7 +17,7 @@ ENV PATH $PATH:/opt/gradle-3.0/bin
 USER root
 
 # Init dependencies for the setup process
-#RUN dpkg --add-architecture i386
+RUN dpkg --add-architecture i386
 RUN apt-get update && \
 	apt-get install software-properties-common unzip -y
 
