@@ -50,10 +50,10 @@ RUN echo -e "\n84831b9409646a918e30573bab4c9c91346d8abd" > "$ANDROID_HOME/licens
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-USER jenkins
+#USER jenkins
 
 # List desired Jenkins plugins here
-RUN /usr/local/bin/install-plugins.sh git gradle
+#RUN /usr/local/bin/install-plugins.sh git gradle
 
 USER root
 RUN apk add --no-cache \
