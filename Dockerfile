@@ -103,8 +103,7 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 USER jenkins
 
 # List desired Jenkins plugins here
-RUN /usr/local/bin/install-plugins.sh git gradle
-
+#RUN /usr/local/bin/install-plugins.sh git gradle
 
 ENTRYPOINT docker-entrypoint.sh; jenkins-slave
 
